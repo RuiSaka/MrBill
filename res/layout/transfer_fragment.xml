@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg" >
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/line1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/date"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="6dp"
+        android:src="@drawable/line" />
+
+    <LinearLayout
+        android:id="@+id/amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line1"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="65dp"
+        android:background="@drawable/stastics_main_bg" >
+
+        <TextView
+            android:id="@+id/rmb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rmb"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/transfer_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/stastics_main_bg"
+            android:gravity="right"
+            android:hint="@string/hint_amount"
+            android:textColor="@color/yellow"
+            android:textColorHint="@color/yellow"
+            android:textSize="30sp" 
+            android:inputType="numberDecimal"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/line2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/amount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="6dp"
+        android:src="@drawable/line" />
+
+    <LinearLayout
+        android:id="@+id/out_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="6dp" >
+
+        <TextView
+            android:id="@+id/account_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="转出:"
+            android:textColor="@color/yellow"
+            android:textSize="18sp" />
+
+
+            <ImageView
+                android:id="@+id/out_category_imv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/yinhangka" />
+
+            <TextView
+                android:id="@+id/out_category_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="银行卡"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+    </LinearLayout>
+    
+    <ImageView
+        android:id="@+id/line3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/out_category"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="6dp"
+        android:src="@drawable/line" />
+    
+    <LinearLayout
+        android:id="@+id/in_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="6dp" >
+
+        <TextView
+            android:id="@+id/account_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="转入:"
+            android:textColor="@color/yellow"
+            android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/in_category_imv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/xianjing" />
+
+            <TextView
+                android:id="@+id/in_category_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="现金"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+    </LinearLayout>
+    
+    <ImageView
+        android:id="@+id/line4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/in_category"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="6dp"
+        android:src="@drawable/line" />
+    <EditText
+        android:id="@+id/transfer_remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line4"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="65dp"
+        android:background="@drawable/stastics_main_bg"
+        android:hint="     填写备注"
+        android:inputType="text"
+        android:maxLines="3"
+        android:minLines="2"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/line5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/transfer_remark"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="6dp"
+        android:src="@drawable/line" />
+
+    <LinearLayout
+        android:id="@+id/button_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line5"
+        android:layout_marginLeft="55dp"
+        android:layout_marginRight="65dp" >
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/line5"
+        android:layout_below="@id/line5"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/save_btn_selector" />
+
+    <ImageButton
+        android:id="@+id/btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/line5"
+        android:layout_below="@id/line5"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/cancel_btn_selector" />
+
+</RelativeLayout>

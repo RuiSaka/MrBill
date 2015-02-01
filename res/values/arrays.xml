@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="EXPENSES_CATEGORY">
+        <item>日常餐饮</item>
+        <item>休闲娱乐</item>
+        <item>学习进修</item>
+        <item>社会实践</item>
+        <item>交友聚会</item>
+        <item>请客礼物</item>
+        <item>话费网费</item>
+        <item>行车交通</item>
+        <item>衣服饰品</item>
+        <item>投资亏损</item>
+        <item>伤病医药</item>
+        <item>其他杂项</item>
+    </string-array>
+    
+    <string-array name="INCOME_CATEGORY">
+        <item>生活费</item>
+        <item>兼职收入</item>
+        <item>投资回报</item>
+        <item>其他收入</item>
+    </string-array>
+    
+    <string-array name="ACCOUNT">
+        <item>现金</item>
+        <item>银行卡</item>
+        <item>其他</item>
+    </string-array>
+    
+    <string-array name="ITEM">
+        <item>理性</item>
+        <item>奢侈</item>
+    </string-array>
+</resources>

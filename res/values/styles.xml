@@ -1,0 +1,8 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme" parent="android:Theme.Light" />
+	<style name="Title_feagment">
+	    <item name="android:textSize">30sp</item>
+	    <item name="android:textColor">#ffffff</item>
+	</style>
+</resources>

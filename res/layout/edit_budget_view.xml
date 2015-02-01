@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wallpaper" >
+
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bat_actionbg" >
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/Title_feagment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/title_edit_budget" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/buttom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/buttom" >
+
+        <ImageView
+            android:id="@+id/edit_budget_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/buttom_bar"
+            android:layout_alignLeft="@id/buttom_bar"
+            android:layout_toLeftOf="@+id/edit_budget_budget"
+            android:src="@drawable/list" />
+
+        <ImageView
+            android:id="@+id/edit_budget_budget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/buttom_bar"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/budget" />
+
+        <ImageView
+            android:id="@+id/edit_budget_stastics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/buttom_bar"
+            android:layout_alignRight="@id/buttom_bar"
+            android:layout_toRightOf="@id/edit_budget_budget"
+            android:src="@drawable/stastics" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/buttom_bar"
+        android:layout_below="@id/action_bar" >
+
+        <LinearLayout
+            android:id="@+id/left_navigaion"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="35"
+            android:background="@drawable/leftline"
+            android:orientation="vertical"
+            android:gravity="center_vertical"  >
+
+            <ImageButton
+                android:id="@+id/back_imb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/edit_back_btn" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/buttom_bar"
+            android:layout_below="@id/action_bar"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="276"
+            android:background="@drawable/bg" >
+
+            <TextView
+                android:id="@+id/edit_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/line1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_date"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="6dp"
+                android:src="@drawable/line" />
+
+            <LinearLayout
+                android:id="@+id/edit_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line1"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="65dp"
+                android:background="@drawable/stastics_main_bg" >
+
+                <TextView
+                    android:id="@+id/rmb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rmb"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/edit_expense_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/stastics_main_bg"
+                    android:gravity="right"
+                    android:hint="@string/hint_amount"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/red"
+                    android:textColorHint="@color/red"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/line2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_amount"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="6dp"
+                android:src="@drawable/line" />
+
+            <LinearLayout
+                android:id="@+id/edit_expense_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="6dp" >
+
+                <ImageView
+                    android:id="@+id/edit_expense_category_imv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/repast" />
+
+                <TextView
+                    android:id="@+id/edit_expense_category_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="日常餐饮"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/line3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_expense_category"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="6dp"
+                android:src="@drawable/line" />
+
+            <LinearLayout
+                android:id="@+id/edit_account_cgtegory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="6dp" >
+
+                <ImageView
+                    android:id="@+id/edit_account_category_imv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/xianjing" />
+
+                <TextView
+                    android:id="@+id/edit_account_category_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="现金"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/line4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_account_cgtegory"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="6dp"
+                android:src="@drawable/line" />
+
+            <EditText
+                android:id="@+id/edit_expense_remark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line4"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="65dp"
+                android:background="@drawable/stastics_main_bg"
+                android:hint="     填写备注"
+                android:inputType="text"
+                android:maxLines="3"
+                android:minLines="2"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/line5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_expense_remark"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="6dp"
+                android:src="@drawable/line" />
+
+            <LinearLayout
+                android:id="@+id/button_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line5"
+                android:layout_marginLeft="55dp"
+                android:layout_marginRight="65dp" >
+
+                <ImageButton
+                    android:id="@+id/edit_btn_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/save_btn_selector" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/edit_btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/button_group"
+                android:layout_toRightOf="@+id/button_group"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/cancel_btn_selector" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/right_navigaion"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="35"
+            android:background="@drawable/rightline"
+            android:orientation="vertical" 
+            android:gravity="center_vertical">
+            <ImageButton
+                android:id="@+id/calaulator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/edit_calculator_btn" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

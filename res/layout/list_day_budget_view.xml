@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wallpaper"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/search_bar"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.8"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/title_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/title_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="月明细"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/day_list_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/day_list_buttom_bar" >
+
+        <ImageView
+            android:id="@+id/previous_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/day_list_bar"
+            android:layout_alignLeft="@id/day_list_bar"
+            android:layout_toLeftOf="@+id/backhome"
+            android:clickable="true"
+            android:src="@drawable/daylist_previous_bg" />
+
+        <ImageView
+            android:id="@+id/backhome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/day_list_bar"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:src="@drawable/daylist_home_bg" />
+
+        <ImageView
+            android:id="@+id/next_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/backhome"
+            android:clickable="true"
+            android:src="@drawable/daylist_nextday_bg" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/day_list_bar"
+        android:layout_below="@id/bar" >
+
+        <ExpandableListView
+            android:id="@+id/day_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@drawable/parent_line"
+            android:drawSelectorOnTop="true"
+            android:groupIndicator="@null" />
+
+        <!-- indicatorRight 设置那个小图标右边缘与 ExpandableListView左边缘的间距 -->
+    </LinearLayout>
+
+</RelativeLayout>

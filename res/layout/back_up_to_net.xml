@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wallpaper"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/dockbar" >
+
+        <Button
+            android:id="@+id/backup_return_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="返回"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="网络备份"
+            android:textSize="24sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeLayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:text="账单先生将会将你的账单数据备份到你的百度网盘" />
+
+    <Button
+        android:id="@+id/Downloader"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="4dp"
+        android:text="恢复" />
+
+    <Button
+        android:id="@+id/Uploader"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_above="@id/Downloader"
+        android:text="备份" 
+        android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/login_pcs"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_above="@id/Uploader"
+        android:text="登陆" 
+        android:layout_marginBottom="8dp"/>
+
+    <ListView
+        android:id="@+id/list_backup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/login_pcs"
+        android:layout_below="@id/textView1" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/nobackup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="96dp"
+        android:textSize="22sp"
+        android:text="您暂时还没有备份记录" />
+
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wallpaper" >
+
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bat_actionbg" >
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/Title_feagment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/title_expense_fragment" />
+    </RelativeLayout>
+
+    
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/buttom_bar"
+        android:layout_below="@id/action_bar" >
+
+        <LinearLayout
+            android:id="@+id/left_navigaion"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="35"
+            android:background="@drawable/leftline"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/allaccount_imb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/allaccount_btn_selector_left_top" 
+                android:layout_weight="1.0"/>
+
+            <ImageButton android:id="@+id/setting_imb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY" 
+                android:src="@drawable/setting_btn_selector_left_buttom"
+                android:layout_weight="1.0"/>
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPaper"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="276" />
+
+        <LinearLayout
+            android:id="@+id/right_navigaion"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="35"
+            android:background="@drawable/rightline" 
+            android:orientation="vertical">
+            
+            <ImageButton
+                android:id="@+id/calculator_imb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/calculator_btn_selector_right_top" 
+                android:layout_weight="1.0"/>
+
+            <ImageButton android:id="@+id/budget_expense_imb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY" 
+                android:src="@drawable/budget_btn_selector_right_buttom"
+                android:layout_weight="1.0"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

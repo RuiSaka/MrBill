@@ -1,0 +1,15 @@
+<resources>
+
+    <string name="app_name">账单先生</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">账单先生</string>
+	<string name="title_expense_fragment">支 出</string>
+	<string name="title_income_fragment">收 入</string>
+	<string name="title_transfer_fragment">转 账</string>
+	<string name="title_edit_budget">编辑账单</string>
+	<string name="dialog_edit">编辑</string>
+	<string name="dialog_delete">删除</string>
+	<string name="dialog_close">取消</string>
+	<string name="rmb"> ¥</string>
+	<string name="hint_amount">0.00 </string>
+</resources>
